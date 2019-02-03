@@ -4,7 +4,7 @@
 
 ## Dependency (依存)
 - 使用言語
-  - python
+  - python(3系)
 - 利用ライブラリ
   - certifi==2018.4.16
   - chardet==3.0.4
@@ -16,18 +16,25 @@
   - requests>=2.20.0
   - six==1.11.0
   - urllib3==1.23
-- 利用ライブラリのインストール 
+
+## Usage (使い方)
+0. Pythonの実行環境を整える（[Python公式](https://www.python.org/downloads/)）
+
+1. ソフトウェアをローカル環境へダウンロードする
+```
+# -zipの場合（download後に任意の場所に展開）
+https://github.com/cotton928/download-my365-images/archive/master.zip
+ 
+# gitの場合
+git clone https://github.com/cotton928/download-my365-images.git
+```
+
+2. 必要なライブラリをインストールする
 ```
 pip install -r requirements.txt
 ```
 
-## Usage (使い方)
-1. ローカル環境へダウンロードする。gitでやる場合は下記のコマンド。zipダウンロードでも良い。
-```
-git clone https://github.com/cotton928/download-my365-images.git
-```
-
-2. configファイル（config.ini）にアカウント情報を設定する。具体的には下記の部分
+3. configファイル（config.ini）にアカウント情報を設定する。具体的には下記の部分
 ```
 [user]
 # ユーザアカウント
@@ -36,7 +43,7 @@ account = アカウントIDをここに設定
 password = パスワードをここに設定
 ```
 
-3. ツールを起動する
+4. ツールを起動する
 ```
 python my365.py
 ```
